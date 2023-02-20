@@ -1,0 +1,26 @@
+JAVSCRIPT: DOM(HTML/CSS),Calculations, Validation
+-> JS is a Scripting / Programing / Dyanmic Programing Language
+->Javascript and Java Both are different 
+-> JS frame works/librarys : 
+
+->Front end/CLint side:
+JQuery, Angular, React
+
+->Server side /BackEnd
+ Node js, Express JS
+
+ MERN
+
+ MEAN
+ ->JS is Casensitive
+ ->Pre Required SKills:
+    =>HTML -To Give Structure for the webpage
+    =>CSS - To Give Styles
+    =>JS - To Control The document
+
+=>Tags and Attributs
+
+=> How many Ways We write JS
+-> Inline JS->Using Events, Mouse,Keyboard,Window
+->Internal JS->Using Script Elemnet
+->External JS->We save Our Js Code in JS document, And we link JS file using Script Tag
