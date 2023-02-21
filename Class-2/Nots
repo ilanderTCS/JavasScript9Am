@@ -1,0 +1,4 @@
+style="color: red; text-align: center; background-color: yellow; padding: 20px; box-shadow: black 2px 3px 10px;"
+
+SetAttribute("attributeName","AttributeValue")
+getAttribute("attributeName")
