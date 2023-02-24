@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Navbar Task</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#"><h2>ILANDER</h2></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="home">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="about">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="service">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="contact">Link</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="signin">Link</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="signup">Link</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="blog">Link</a>
+        </li> 
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid mt-3">
+  <h3>Collapsible Navbar</h3>
+  <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).</p>
+  <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+  <p>Tip: You can also remove the .navbar-expand-md class to ALWAYS hide navbar links and display the toggler button.</p>
+</div>
+
+
+<script>
+    let nav=["Home","About","Services","Contact","SignIn","Blog","SignUp"]
+/*
+    document.getElementById("home").innerHTML=nav[0]
+    document.getElementById("about").innerHTML=nav[1]
+    document.getElementById("service").innerHTML=nav[2]
+    document.getElementById("contact").innerHTML=nav[3]
+    document.getElementById("signin").innerHTML=nav[4]
+    document.getElementById("signup").innerHTML=nav[6]
+    document.getElementById("blog").innerHTML=nav[5]
+
+    */
+
+   const className=document.getElementsByClassName("nav-link")
+   console.log(className)
+   className[0].innerHTML=nav[0]
+   className[1].innerHTML=nav[1]
+   className[2].innerHTML=nav[2]
+   className[3].innerHTML=nav[3]
+   className[4].innerHTML=nav[4]
+   className[5].innerHTML=nav[6]
+   className[6].innerHTML=nav[5]
+</script>
+
+</body>
+</html>
+
+
