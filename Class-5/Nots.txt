@@ -1,0 +1,32 @@
+Functions=>
+A JavaScript function is a block of code designed to perform a particular task.
+A JavaScript function is executed when "something" invokes it (calls it).
+
+
+Function Types(4)
+=>Without Parametrs, Without Return Value
+=>With Parametrs, without Return
+=>Without Parametrs,with Return
+=>With Parametrs, With Return
+
+
+Arrow Functions:
+old:
+
+function fun(){
+
+}
+fun()
+
+New:
+let fun=()=>{}
+fun()
+
+Scope of variables:
+Global Scope=> We can use local and global
+Local Scope(Functional Scope)=>Only Local We use
+Block Scop=>
+
+{
+   let  
+}
