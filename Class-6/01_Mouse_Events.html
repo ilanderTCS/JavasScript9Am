@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays_Objects</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .div1{
+            width:200px;
+            height:200px;
+            background: red;
+        }
+    </style>
+</head>
+<body style="height:1500px" id="bod" onscroll="scrol()">
+    <nav class="navbar bg-dark navbar-dark">
+        <div class="container">
+            <span class="navbar-text"><h3>Mouse Events</h3></span>
+        </div>
+    </nav>
+    <div class="container text-center mt-5">
+        <h1 id="msg">iLander Technologies Pvt ltd</h1>
+        <button class="btn btn-danger" onclick="clk()">Click Me</button>
+        <button  class="btn btn-success" ondblclick="dbl()">DBL Click Me</button>
+    </div>
+   
+    <div class="container">
+        <div class="div1" onmouseover="hover()" id="div1" onmouseout="out()" onmousedown="down()" onmouseup="up()" onmousemove="move()">
+
+        </div>
+    </div>
+
+    <script>
+        let msg=document.getElementById("msg")
+        let bod=document.getElementById("bod")
+        let div1=document.getElementById("div1")
+
+       function clk(){
+        msg.style.color="red"
+       }
+       function dbl(){
+        msg.style.color="green"
+       }
+       function scrol(){
+        bod.style.backgroundColor="yellow"
+       }
+       function hover(){
+        div1.style.background="green"
+       }
+       function hover(){
+        div1.style.background="green"
+       }
+       function out(){
+        div1.style.background="red"
+       }
+       function down(){
+        div1.style.background="hotpink"
+       }
+       function up(){
+        div1.style.background="gray"
+       }
+       function move(){
+        div1.style.background="black"
+       }
+    </script>
+</body>
+</html>
