@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays_Objects</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .div1{
+            width:200px;
+            height:200px;
+            background: red;
+        }
+    </style>
+</head>
+<body style="height:1500px" id="bod" onscroll="scrol()" onload="//alert('page loaded')" >
+    <nav class="navbar bg-dark navbar-dark">
+        <div class="container">
+            <span class="navbar-text"><h3>About Page</h3></span>
+        </div>
+        <a href="about.html">about us</a>
+    </nav>
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-sm-5 mx-auto">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h3>Login Form</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="" onsubmit="submit1()">
+                            <div class="mb-3 mt-3">
+                                <label for="email" class="form-label">Email:</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" onfocus="focus1()" onblur="blur1()" onkeydown="down()" onchange="change1()">
+                                <p id="btn"></p>
+                                <p id="chanage"></p>
+                              </div>
+                              <div class="mb-3">
+                                <label for="pwd" class="form-label">Password:</label>
+                                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" onkeyup="up()">
+                                <p id="btn1"></p>
+                              </div>
+                              <div class="form-check mb-3">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                                </label>
+                              </div>
+                              <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        //alert('page Loading')
+        let email=document.getElementById("email")
+        let pass=document.getElementById("pwd")
+        let p=document.getElementById("btn")
+        let p1=document.getElementById("btn1")
+        let p2=document.getElementById("chanage")
+
+
+        function submit1(){
+            alert("Enter User Details mail and Password")
+        }
+
+        function focus1(){
+            email.style.background="red" 
+            email.style.color="white"
+        }
+        function blur1(){
+            email.style.background="green" 
+            //email.style.color="black"
+        }
+
+        function down(){
+           //alert("Key Pressed")
+           p.innerHTML=email.value
+        }
+        function up(){
+           //alert("Key up")
+           p1.innerHTML=pass.value
+        }
+
+        function change1(){
+          p2.innerHTML=email.value
+        }
+    </script>
+</body>
+</html>
