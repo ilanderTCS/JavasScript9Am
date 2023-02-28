@@ -1,0 +1,101 @@
+Conditional Statements:
+
+IF
+
+if(condition){
+
+}
+
+
+IF ELSE
+
+if(condition){
+
+}
+else{
+
+}
+
+
+IF ELSE IF ELSE
+
+if(condition){
+
+}
+elseif(condition){
+
+}
+elseif(condition){
+    
+}
+elseif(condition){
+    
+}
+elseif(condition){
+    
+}
+elseif(condition){
+    
+}
+else{
+
+}
+
+SWITCH
+
+SWITCH(case){
+    case :
+            code staement;
+            break;  
+    case :
+            code staement;
+            break;
+    case :
+            code staement;
+            break;
+
+    case :
+            code staement;
+            break;
+
+    default: 
+        code staement;
+}
+
+Month=>1-12
+0-11
+0-jan
+1-feb
+.
+.
+11-Dec
+
+Days:
+0-Sunday
+1-Monday
+2-Tue
+3-Wed
+4-thus
+5-friday
+6-saturday
+
+
+Looping Statments:
+WHILE:
+let i=0;
+while(condition){
+    //code
+    incremnt/decrment
+}
+
+DO-WHILE:
+let i=0;
+do{
+  //code   
+  incremnt/decrment
+}while(condition)
+
+FOR:
+for(let i=0;condition;inc/dec){
+    //code
+}
