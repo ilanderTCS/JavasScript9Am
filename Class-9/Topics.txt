@@ -1,0 +1,21 @@
+DOM=>Document Object Model
+
+->Event Handlers
+->Dynamic Create/Remove Elements Nodes
+->query Selector
+->addEventListener()
+
+BOM=>Broswer Object Model
+
+
+JSON=> JavaScript Object Notation
+
+JSON to OBJECT=>
+
+OBJECT to JSON=>
+
+
+CLASS=>
+
+
+Local Storage and Session Storage
