@@ -1,0 +1,26 @@
+Topic-1:Arrays
+Topic-2:Arrays Methods
+Topic-3:Arrays Sorting
+Topic-4:Arrays Itteration
+
+
+Topic-5:Rest Operator=>...args=>
+function sum(name,...args){
+
+}
+sum("iLander",10,20,30)
+
+
+Topic-6:Spread Operator=>...array=>one value 
+function sum(name,...args){
+
+}
+let arr=[10,20,30]
+sum("iLander",arr)   =>(Wrong Case)
+sum("iLander",...arr)   =>(correct ,Here Spread Case)
+
+
+Topic-7:Destructring Arrays . Objects
+
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar bg-dark navbar-dark">
+        <div class="container">
+            <span class="navbar-text"><h3>Array Methods</h3></span>
+        </div>
+    </nav>
+    <div class="container">
+        <h3 id="demo" class="text-center"></h3>
+    </div>
+    <script>
+        //const courses = ["HTML", "CSS", "JS", "BS"];
+        //courses.push("Angular","TS")
+        /*
+        courses.push("Angular","TS")
+        ["HTML", "CSS", "JS", "BS","Angular","TS"]
+        let skill=courses.pop()
+        console.log(skill);
+       */
+      /*
+        courses.shift();
+        courses.unshift("Basic Computer Skills","HTML");
+        courses[0]="Basic Computer"
+        delete courses[2];
+
+        */
+        const course1 = ["HTML", "CSS", "JS", "BS"];
+        const course2=["ES6","React Js"]
+        const course3=["ES6","Angular","TypeScript"]
+        const course4=["ES6","PHP","MySQL"]
+
+        const reactSkills=course1.concat(course2,course3)
+        const reactSkills1=[...course1,...course2,...course3]
+
+        //document.getElementById("demo").innerHTML = courses.toString();
+        //document.getElementById("demo").innerHTML = courses;
+        //document.getElementById("demo").innerHTML = courses.join("*");
+        //document.getElementById("demo").innerHTML = courses;
+
+        document.getElementById("demo").innerHTML =reactSkills;
+    </script>
+</body>
+</html>
