@@ -1,0 +1,24 @@
+API:
+
+POST=> To Send Data from front end to Database
+
+=>parametrs
+=>method
+=>Send=> Data
+=>open Method(method,url)
+
+Register:
+
+Method:POST
+URL:http://ilandertech.com/api/index.php/Welcome/AddStuRegister
+parameters:
+fname
+lname
+email
+ph
+pwd
+
+formate: FormData
+
+
+GET=> To Get Data From Database
