@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Register Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+   <h1 class="text-center text-danger my-4">Registration Form</h1> 
+   <div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <div class="card">
+          <div class="card-body">
+            <form>
+              <div class="mb-3 mt-3">
+                <label for="fname" class="form-label"><span class="text-danger">*</span>Fname:</label>
+                <input type="text" class="form-control" id="fname" placeholder="Enter Fname">
+                <p class="text-danger" id="err-fname"></p>
+              </div>
+              <div class="mb-3 mt-3">
+                <label for="lname" class="form-label">*Lname:</label>
+                <input type="text" class="form-control" id="lname" placeholder="Enter Lname">
+                <p class="text-danger" id="err-lname"></p>
+              </div>
+              <div class="mb-3 mt-3">
+                <label for="email" class="form-label">*Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email">
+                <p class="text-danger" id="err-email"></p>
+              </div>
+              <div class="mb-3 mt-3">
+                <label for="ph" class="form-label">*Mobile Number:</label>
+                <input type="number" class="form-control" id="ph" placeholder="Enter Mobile Number">
+                <p class="text-danger" id="err-ph"></p>
+              </div>
+              
+             
+              <div class="mb-3">
+                <label for="pwd" class="form-label">*Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+
+                <p class="text-danger" id="err-pwd"></p>
+              </div>
+              <div class="mb-3">
+                <label for="cpwd" class="form-label">*Confirm Password:</label>
+                <input type="password" class="form-control" id="cpwd" placeholder="Enter cpassword">
+
+                <p class="text-danger" id="err-cpwd"></p>
+              </div>
+              <div class="form-check mb-3">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" id="check"> I Accept All Above Details True.
+
+                  <p class="text-danger" id="err-check"></p>
+                </label>
+              </div>
+              <button type="submit" id="btn" class="btn btn-primary">Register</button>
+              <p  id="err"></p>
+              <p class="mt-3 text-center"><a href="login.html" class=" text-decoration-none ">Already have an account?</a></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+
+   <script>
+       document.getElementById("btn").addEventListener("click", (event)=>{
+            event.preventDefault();
+          let fname=document.getElementById("fname").value;
+          let lname=document.getElementById("lname").value;
+          let email=document.getElementById("email").value;
+          let ph=document.getElementById("ph").value;
+          let pwd=document.getElementById("pwd").value
+          let cpwd=document.getElementById("cpwd").value
+          let check=document.getElementById("check").checked
+            console.log(fname.length)
+
+            if(fname.length<8 && fname.length==0){
+                //alert("Enter Fname")
+                document.getElementById("err").innerHTML="<b class='text-danger'>ENter fname grater than 8 Charecters and ENTER FNAME</b>"
+            }
+            else if(lname.length===0)
+            {
+                document.getElementById("err").innerHTML="<b class='text-danger'>ENTER LNAME</b>" 
+            }
+            else if(email.length===0)
+            {
+                document.getElementById("err").innerHTML="<b class='text-danger'>ENTER EMAIL</b>" 
+            }
+            else if(ph.length===0)
+            {
+                document.getElementById("err").innerHTML="<b class='text-danger'>ENTER PHONE NUMBER</b>" 
+            }
+            else if(pwd.length===0){
+                document.getElementById("err").innerHTML="<b class='text-danger'>Enter Password</b>" 
+            }
+
+            else if(cpwd.length===0){
+                document.getElementById("err").innerHTML="<b class='text-danger'>Enter Confirm Password</b>" 
+            }
+            else if(cpwd!=pwd){
+                document.getElementById("err").innerHTML="<b class='text-danger'>Check Your Passwords</b>" 
+            }
+            else if(check===false){
+                document.getElementById("err").innerHTML="<b class='text-danger'>Accept Your Conditions</b>" 
+            }
+            else{
+                //document.getElementById("err").innerHTML="<b class='text-success'>Success All Details Submited</b>"  
+
+                const data=new FormData()
+                data.append("fname",fname)
+                data.append("lname",lname)
+                data.append("email",email)
+                data.append("ph",ph)
+                data.append("pwd",pwd)
+
+                let http=new XMLHttpRequest();
+
+                  http.open("POST","http://ilandertech.com/api/index.php/Welcome/AddStuRegister")
+                  http.send(data)
+
+
+                  console.log(http)
+
+
+                  http.onreadystatechange=()=>{
+
+                    console.log(http.response)
+
+                    let msg=JSON.parse(http.response)
+
+                    console.log(msg)
+                    
+                    //msg={status:,message:}
+                    document.getElementById("err").innerHTML=msg.message
+
+                    if(msg.status==1){
+                      document.getElementById("err").style.color="green"
+                      document.getElementById("err").style.fontWeight="bold"
+                    }else{
+                      document.getElementById("err").style.color="red"
+                      document.getElementById("err").style.fontWeight="bold"
+                    }
+                  }
+
+             
+            }
+        });
+
+   </script>
+</body>
+</html>
+
+
