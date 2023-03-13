@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login validation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+</head>
+<body>
+   <h1 class="text-center text-primary my-4">Async-await</h1> 
+  
+   <script>
+    /*
+   async function fun(){
+    try{
+        return "Hello JS"
+    }
+    catch{
+        console.log("Code Error")
+    }
+   }
+
+   console.log(fun())
+    */
+
+    async function fun1(){
+        console.log("1:Message")
+        await console.log("2:Message")
+        console.log("3:Message")
+    }
+    fun1()
+    console.log("4:Message")
+    console.log("5:Message")
+   </script>
+</body>
+</html>
+
+
